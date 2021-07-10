@@ -1,0 +1,58 @@
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 475px)";
+$color: #f3f3f3;
+$color_1: #ffffff;
+$color_2: #121212;
+
+@media #{$mobile} {
+  .introduce {
+    &__header {
+      padding: 1rem 0;
+      font-size: 1.25rem;
+      justify-content: center;
+    }
+
+    &__description {
+      width: 100vw;
+      height: 50vh;
+      justify-content: center;
+
+      &--img {
+        position: absolute;
+        width: 100vw;
+        height: 50vh;
+        object-fit: cover;
+      }
+
+      &--content {
+        position: absolute;
+        padding: 1rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $color_1;
+        opacity: 0.9;
+      }
+
+      &--text {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      &--btn {
+        margin-top: 0.5rem;
+        padding: 0.5rem 1.25rem;
+        background-color: $color;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover, &:focus, &:active {
+            background-color: rgba($color_2,.2);
+        }
+      }
+    }
+  }
+}

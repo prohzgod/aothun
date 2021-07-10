@@ -1,0 +1,24 @@
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 475px)";
+$color: #f3f3f3;
+$color_1: #ffffff;
+$color_2: #121212;
+
+@media #{$mobile} {
+  .list-product {
+    margin-top: 2.75rem;
+    &__title {
+      margin: 3rem 0 1rem 0;
+      font-size: 1.25rem;
+    }
+
+    &__list {
+      margin-bottom: 4rem;
+
+      &--item {
+        margin: 1rem 0;
+      }
+    }
+  }
+}

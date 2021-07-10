@@ -1,0 +1,50 @@
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 475px)";
+$color: #f3f3f3;
+$color_1: #ffffff;
+$color_2: #121212;
+
+@media #{$mobile} {
+  .product {
+    width: 105%;
+    height: 15.25rem;
+    margin: 0.5rem -0.25rem;
+    color: $color_2;
+    border-radius: 10px;
+    border: none;
+
+    &__img {
+      width: 100%;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    &__body {
+      padding: 0.25rem 1rem;
+
+      &--title {
+        padding: 0.25rem !important;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1;
+        height: 2.5rem !important;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      &--price {
+        padding: .25rem !important;
+        text-align: center;
+
+        &.discount {
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}

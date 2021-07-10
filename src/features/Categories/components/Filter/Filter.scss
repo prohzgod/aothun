@@ -1,0 +1,38 @@
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 475px)";
+$color: #f3f3f3;
+$color_1: #ffffff;
+$color_2: #121212;
+
+@media #{$mobile} {
+  .filter {
+    padding: 0 0.5rem;
+    margin: 3rem 0 0 0;
+
+    &__title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__list {
+      padding: 0.5rem;
+
+      &--item {
+        margin: 0.3rem;
+        padding: 0.3rem 1.75rem;
+        color: $color_2;
+        border-radius: 10px;
+        border: 1px solid $color_2;
+
+        &:hover,
+        &:focus,
+        &:active {
+          border-color: $color;
+          background-color: $color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

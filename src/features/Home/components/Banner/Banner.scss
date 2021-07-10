@@ -1,0 +1,28 @@
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 475px)";
+$color: #f3f3f3;
+$color_1: #ffffff;
+$color_2: #121212;
+
+@media #{$mobile} {
+  .banner {
+    &__slide {
+      padding: 1.5rem 0;
+      
+      &--btn {
+        margin-bottom: 2rem;
+        padding: 0.5rem 1.25rem;
+        background-color: $color;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: rgba($color_2, 0.2);
+        }
+      }
+    }
+  }
+}

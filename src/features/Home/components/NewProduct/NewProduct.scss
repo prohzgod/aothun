@@ -1,0 +1,25 @@
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 475px)";
+$color: #f3f3f3;
+$color_1: #ffffff;
+$color_2: #121212;
+
+@media #{$mobile} {
+    .new-product {
+      &__title {
+        margin-top: 4rem;
+        padding: 1rem 0;
+        font-size: 1.25rem;
+        justify-content: center;
+      }
+
+      &__list {
+          margin-bottom: 4rem;
+
+          &--item {
+            margin: 1rem 0;
+        }
+      }
+    }
+  }
