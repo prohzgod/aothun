@@ -5,20 +5,35 @@ $color: #f3f3f3;
 $color_1: #ffffff;
 $color_2: #121212;
 
+.form-control {
+  box-shadow: none !important;
+}
+
+.dropdown-menu.show {
+  top: 5px !important;
+}
+
+.dropdown-item {
+  font-size: 0.7rem;
+}
+
 // Desktop
-.header {
-  font-size: 1.1rem;
-  margin: 2rem 0;
-  
-  @media #{$mobile} {
+
+@media #{$mobile} {
+  .header {
+    display: none;
+    background-color: $color;
+
+    &.mobile {
+      display: flex;
+    }
     &__top {
       position: fixed;
-      display: flex;
       height: 4rem;
       top: 0;
       left: 0;
       right: 0;
-      z-index: 1;
+      z-index: 16;
 
       background-color: $color;
 
@@ -32,6 +47,7 @@ $color_2: #121212;
     &__bottom {
       position: fixed;
       height: 4rem;
+      margin: 0 !important;
       width: 100vw;
       bottom: 0;
       z-index: 1;
@@ -50,6 +66,85 @@ $color_2: #121212;
           color: $color_2;
           width: 24%;
           transform: scale(1.3, 1.3);
+        }
+      }
+    }
+  }
+}
+
+@media #{$desktop} {
+  .header {
+    display: none;
+    
+    &.desktop {
+      display: flex;
+      height: 10vh;
+      margin-bottom: 2rem;
+    }
+
+    &__background {
+      position: fixed;
+      top: 0;
+      padding: .75rem;
+      background-color: $color_1;
+      border: 1px solid $color;
+    }
+    &__left {
+      &--item {
+        font-size: 0.8rem;
+        display: inline-block;
+        width: 20%;
+        margin: 0 0.25rem;
+        padding-bottom: 0.25rem;
+        text-align: center;
+        // border-bottom: 1px solid transparent;
+        color: $color_2;
+
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+          transition: all 750ms;
+          border-bottom: 1px solid $color_2;
+          color: $color_2;
+        }
+
+        &.active {
+          text-decoration: none;
+          border-bottom: 1px solid $color_2;
+          color: $color_2;
+        }
+      }
+
+      &--search {
+        margin: 0 1.5rem;
+        width: 15rem;
+        font-size: 0.8rem;
+        height: 1rem;
+      }
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    &__right {
+      &--item {
+        font-size: 1.2rem;
+        color: $color_2;
+        margin: 0 1.5rem;
+        padding: 0.25rem 0.5rem;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+          transition: all 750ms;
+          border-bottom: 1px solid $color_2;
+          color: $color_2;
         }
       }
     }

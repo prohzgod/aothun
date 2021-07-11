@@ -28,7 +28,7 @@ function ListProduct(props) {
     <Container fluid>
       <Row className="list-product">
         {listProduct.map((product) => (
-          <Col xs="6">
+          <Col xs="6" md="3">
             <Product product={product} />
           </Col>
         ))}

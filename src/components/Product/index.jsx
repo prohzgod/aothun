@@ -6,27 +6,32 @@ import "./Product.scss";
 
 function Product(props) {
   const { product } = props;
-  console.log(product.id, product.discount)
+  console.log(product.id, product.discount);
 
   return (
-    <NavLink exact className="" to={"/product/" + product.id}>
-      <Card className="product">
+    <NavLink exact className="product" to={"/product/" + product.id}>
+      <Card>
         <img className="product__img" src={product.image} alt={product.name} />
         <Container className="product__body">
           <Row>
             <Col className="product__body--title">
-              <span>{product.name}</span>
+              <span>{product.name} </span>
             </Col>
           </Row>
-          <Row className="justify-content-center">
-            <Col xs="6" className="product__body--price ">
-              <span>{product.price - product.price * product.discount}.đ</span>
+          <Row>
+            <Col className="product__body--title">
+              <span>{product.companyCode} </span>
             </Col>
+          </Row>
+          <Row>
             {product.discount === 0 && (
-              <Col xs="6" className="product__body--price discount">
+              <Col xs="auto" className="product__body--price discount">
                 <span>{product.price}.đ</span>
               </Col>
             )}
+            <Col xs="auto" className="product__body--price ">
+              <span>{product.price - product.price * product.discount}.đ</span>
+            </Col>
           </Row>
         </Container>
       </Card>

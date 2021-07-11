@@ -5,45 +5,73 @@ $color: #f3f3f3;
 $color_1: #ffffff;
 $color_2: #121212;
 
+.product {
+  margin: 0.5rem -0.25rem;
+  color: $color_2;
+  border-radius: 10px;
+  &__img {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  &__body {
+    padding: 0.25rem 1rem;
+
+    &--title {
+      font-size: 0.8rem;
+      font-weight: 400;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &--price {
+      color: rgba($color_2, $alpha: 0.7);
+      font-size: 0.8rem;
+      padding: 0.25rem !important;
+      text-align: center;
+
+      &.discount {
+        font-size: 0.7rem;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgba($color_2, $alpha: 0.7);
+    text-decoration: none;
+  }
+}
+
 @media #{$mobile} {
   .product {
     width: 105%;
     height: 15.25rem;
-    margin: 0.5rem -0.25rem;
-    color: $color_2;
-    border-radius: 10px;
-    border: none;
 
     &__img {
-      width: 100%;
       height: 10rem;
-      object-fit: cover;
-      border-radius: 10px;
     }
     &__body {
-      padding: 0.25rem 1rem;
-
       &--title {
-        padding: 0.25rem !important;
-        text-align: center;
-        font-size: 1.1rem;
-        font-weight: 400;
-        line-height: 1;
-        height: 2.5rem !important;
-
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        padding-left: 0.25rem !important;
       }
+    }
+  }
+}
 
-      &--price {
-        padding: .25rem !important;
-        text-align: center;
+@media #{$desktop} {
+  .product {
+    width: 100%;
+    height: 15.25rem;
 
-        &.discount {
-          text-decoration: line-through;
-        }
+    &__img {
+      height: 17.5rem;
+    }
+    &__body {
+      &--title {
+        padding-left: 0.5rem !important;
       }
     }
   }

@@ -19,7 +19,7 @@ function NewProduct(props) {
 
         setProduct(response.content);
 
-        console.log(response)
+        console.log(response);
       } catch (error) {
         console.log("failed", error);
       }
@@ -33,14 +33,18 @@ function NewProduct(props) {
           <span>SẢN PHẨM MỚI</span>
         </Col>
       </Row>
-      <Row className="new-product__list">
-        {products.map((product) => {
-          return (
-            <Col xs="6">
-              <Product product={product} />
-            </Col>
-          );
-        })}
+      <Row className="new-product__list justify-content-center">
+        <Col md="11">
+          <Row>
+            {products.map((product) => {
+              return (
+                <Col xs="6" md="3">
+                  <Product product={product} />
+                </Col>
+              );
+            })}
+          </Row>
+        </Col>
       </Row>
     </Container>
   );

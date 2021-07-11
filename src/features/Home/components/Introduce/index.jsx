@@ -13,7 +13,7 @@ Introduce.defaultProps = {
   title: "GIỚI THIỆU",
   photo: "https://picsum.photos/id/2/500/500",
   description:
-    "'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by acciden'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by acciden",
+    "'lorem ipsum' will uncover many we à jkashfdjash dkfhsakj fksajh fdkjsahfjkhaskj fhsakj fkajdh fkjsahfkj hsa kfdhask jhfka jsdhfkjsahb sites still in their infancy. Various versions have evolved over the years, sometimes by acciden'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by acciden",
 };
 
 function Introduce(props) {
@@ -27,7 +27,7 @@ function Introduce(props) {
         </Col>
       </Row>
       <Row className="introduce__description">
-        <Col>
+        <Col md="10">
           <Row>
             <img
               src={photo}

@@ -5,6 +5,10 @@ $color: #f3f3f3;
 $color_1: #ffffff;
 $color_2: #121212;
 
+.carousel {
+  width: 100%;
+}
+
 @media #{$mobile} {
   .banner {
     &__slide {
