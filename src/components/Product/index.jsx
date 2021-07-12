@@ -24,7 +24,7 @@ function Product(props) {
             </Col>
           </Row>
           <Row>
-            {product.discount === 0 && (
+            {product.discount === 0 || (
               <Col xs="auto" className="product__body--price discount">
                 <span>{product.price}.đ</span>
               </Col>

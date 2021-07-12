@@ -22,7 +22,7 @@ function Introduce(props) {
   return (
     <Container fluid>
       <Row className=" introduce__header">
-        <Col xs="auto" className="introduce__header--title">
+        <Col xs="auto" sm="auto" className="introduce__header--title">
           <span>{title}</span>
         </Col>
       </Row>

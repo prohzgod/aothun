@@ -15,7 +15,9 @@ function Filter(props) {
           <span className="filter__title">DANH MỤC SẢN PHẨM</span>
         </Row>
         <Row className="filter__list align-items-center">
-          <span>Loại sản phẩm: </span>
+          <div className="filter__list--title">
+            <span>Loại sản phẩm: </span>
+          </div>
           {categrorys.map((categrory) => (
             <NavLink
               className="filter__list--item"
@@ -27,7 +29,9 @@ function Filter(props) {
         </Row>
         <br />
         <Row className="filter__list align-items-center">
-          <span>Thương hiệu: </span>
+          <div className="filter__list--title">
+            <span>Thương hiệu: </span>
+          </div>
           {brands.map((brand) => (
             <NavLink
               className="filter__list--item"

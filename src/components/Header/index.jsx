@@ -107,7 +107,7 @@ function Header(props) {
         </Row>
       </Row>
       <Row className="header desktop align-items-center">
-        <Col md="12" className="header__background" style={{ zIndex: 10 }}>
+        <Col md="12" className="header__background" style={{ zIndex: 16 }}>
           <Row>
             <Col xs="4">
               <NavLink

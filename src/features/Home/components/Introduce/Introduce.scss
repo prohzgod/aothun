@@ -122,3 +122,63 @@ $color_2: #121212;
     }
   }
 }
+
+
+@media #{$tablet} {
+  .introduce {
+    &__header {
+      margin-top: 4rem;
+      padding: 1rem 0;
+      font-size: 1.25rem;
+      justify-content: center;
+    }
+
+    &__description {
+      justify-content: center;
+
+      &--img {
+        width: 55vw;
+        height: 22.5rem;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      &--content {
+        position: absolute;
+        padding: 5.5rem 1rem;
+        width: 30vw;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: $color;
+        border-radius: 10px;
+        align-self: center;
+      }
+
+      &--text {
+        height: 9.5rem;
+        font-size: .9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      &--btn {
+        margin-top: 0.5rem;
+        padding: 0.4rem 1.75rem;
+        background-color: $color_1;
+        border-radius: 10px;
+        font-size: .8rem;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: rgba($color_2, 0.2);
+          transition: all 750ms;
+        }
+      }
+    }
+  }
+}

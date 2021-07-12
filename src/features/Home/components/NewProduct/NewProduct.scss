@@ -42,3 +42,23 @@ $color_2: #121212;
     }
   }
 }
+
+@media #{$tablet} {
+  .new-product {
+    &__title {
+      margin-top: 3rem;
+      padding: 1rem 0;
+      font-size: 1.25rem;
+      justify-content: center;
+    }
+
+    &__list {
+      margin-bottom: 4rem;
+
+      &--item {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
