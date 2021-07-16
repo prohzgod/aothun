@@ -14,7 +14,7 @@ import {
   Collapse,
   Dropdown,
 } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 import "./Header.scss";
 
@@ -35,7 +35,7 @@ function Header(props) {
           <Col xs="3" className="header__top--item">
             <Dropdown isOpen={dropdownUser} toggle={toggleUser}>
               <DropdownToggle tag="span">
-                <i class="fas fa-user-circle"></i>
+                <i className="fas fa-user-circle"></i>
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>Đăng nhập</DropdownItem>
@@ -58,7 +58,7 @@ function Header(props) {
             <Input placeholder="Search" />
             <InputGroupAddon addonType="append">
               <InputGroupText onClick={toggle}>
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
               </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
@@ -70,7 +70,7 @@ function Header(props) {
             className="header__bottom--item"
             to="/home"
           >
-            <i class="fas fa-home"></i>
+            <i className="fas fa-home"></i>
           </NavLink>
           <NavLink
             exact
@@ -78,7 +78,7 @@ function Header(props) {
             className="header__bottom--item"
             to="/store"
           >
-            <i class="fas fa-store"></i>
+            <i className="fas fa-store"></i>
           </NavLink>
           <NavLink
             exact
@@ -86,7 +86,7 @@ function Header(props) {
             className="header__bottom--item"
             to="/categories"
           >
-            <i class="fas fa-th-large"></i>
+            <i className="fas fa-th-large"></i>
           </NavLink>
           <NavLink
             exact
@@ -94,7 +94,7 @@ function Header(props) {
             className="header__bottom--item"
             to="/notification"
           >
-            <i class="fas fa-bell"></i>
+            <i className="fas fa-bell"></i>
           </NavLink>
           <NavLink
             exact
@@ -122,7 +122,6 @@ function Header(props) {
                 exact
                 activeClassName="active"
                 className="header__left--item"
-                toggle={toggleStoreHidden}
                 to="/store"
               >
                 <Dropdown isOpen={dropdownStore} onMouseEnter={toggleStoreShow}>
@@ -139,7 +138,7 @@ function Header(props) {
                   <Input placeholder="Search" bsSize="sm" />
                   <InputGroupAddon addonType="append">
                     <InputGroupText onClick={toggle}>
-                      <i class="fas fa-search"></i>
+                      <i className="fas fa-search"></i>
                     </InputGroupText>
                   </InputGroupAddon>
                 </InputGroup>
@@ -164,7 +163,7 @@ function Header(props) {
                   className="header__right--item"
                   to="/notification"
                 >
-                  <i class="fas fa-bell"></i>
+                  <i className="fas fa-bell"></i>
                 </NavLink>
                 <Dropdown
                   isOpen={dropdownUser}
@@ -172,7 +171,7 @@ function Header(props) {
                   className="header__right--item"
                 >
                   <DropdownToggle tag="span">
-                    <i class="fas fa-user-circle"></i>
+                    <i className="fas fa-user-circle"></i>
                   </DropdownToggle>
                   <DropdownMenu right>
                     <DropdownItem>Đăng nhập</DropdownItem>

@@ -1,0 +1,30 @@
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$mobile: "(max-width: 475px)";
+$color: #f3f3f3;
+$color_1: #ffffff;
+$color_2: #121212;
+
+@media #{$desktop} {
+  .list-size {
+    margin-top: 1rem;
+
+    &__item {
+      padding: 0.25rem;
+      margin: 0 0.25rem;
+      text-align: center;
+      width: 2.25rem;
+      background-color: rgba($color_2, 0.1);
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid transparent;
+
+
+      &.active {
+        border: 1px solid $color_2;
+        background-color: $color_1;
+
+      }
+    }
+  }
+}

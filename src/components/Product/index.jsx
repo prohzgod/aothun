@@ -6,7 +6,6 @@ import "./Product.scss";
 
 function Product(props) {
   const { product } = props;
-  console.log(product.id, product.discount);
 
   return (
     <NavLink exact className="product" to={"/product/" + product.id}>

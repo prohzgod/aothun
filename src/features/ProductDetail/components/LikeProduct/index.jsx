@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Col, Container, Row } from "reactstrap";
-import "./NewProduct.scss";
+import "./LikeProduct.scss";
 import Product from "../../../../components/Product";
 import productApi from "../../../../api/productApi";
 
-function NewProduct(props) {
+function LikeProduct(props) {
   const [products, setProduct] = useState([]);
 
-  // const products = axios.get("http://localhost:8080/api/product");
   useEffect(() => {
-    const fetchNewProduct = async () => {
+    const fetchLikeProduct = async () => {
       try {
         const params = {
           pageSize: 4,
@@ -22,16 +21,16 @@ function NewProduct(props) {
         console.log("failed", error);
       }
     };
-    fetchNewProduct();
+    fetchLikeProduct();
   }, []);
   return (
     <Container fluid>
-      <Row className="new-product__title">
+      <Row className="like-product__title">
         <Col xs="auto">
-          <span>SẢN PHẨM MỚI</span>
+          <span>CÓ THỂ BẠN THÍCH</span>
         </Col>
       </Row>
-      <Row className="new-product__list justify-content-center">
+      <Row className="like-product__list justify-content-center">
         <Col md="11">
           <Row>
             {products.map((product) => {
@@ -48,6 +47,6 @@ function NewProduct(props) {
   );
 }
 
-NewProduct.propTypes = {};
+LikeProduct.propTypes = {};
 
-export default NewProduct;
+export default LikeProduct;
