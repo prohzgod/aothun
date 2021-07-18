@@ -14,7 +14,7 @@ import {
   Collapse,
   Dropdown,
 } from "reactstrap";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Header.scss";
 
@@ -52,7 +52,7 @@ function Header(props) {
         </Row>
         <Collapse
           isOpen={isOpen}
-          className=" justify-content-center align-items-center header__top"
+          className="row justify-content-center align-items-center header__top"
         >
           <InputGroup style={{ width: 300 }}>
             <Input placeholder="Search" />

@@ -19,11 +19,31 @@ $color_2: #121212;
       border-radius: 5px;
       border: 1px solid transparent;
 
+      &.active {
+        border: 1px solid $color_2;
+        background-color: $color_1;
+      }
+    }
+  }
+}
+
+@media #{$mobile} {
+  .list-size {
+    margin-top: 1rem;
+
+    &__item {
+      padding: 0.25rem;
+      margin: 0 0.25rem;
+      text-align: center;
+      width: 2.25rem;
+      background-color: rgba($color_2, 0.1);
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid transparent;
 
       &.active {
         border: 1px solid $color_2;
         background-color: $color_1;
-
       }
     }
   }

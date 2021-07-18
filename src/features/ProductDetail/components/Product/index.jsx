@@ -11,15 +11,15 @@ function Product(props) {
     <Container fluid>
       <Row className="justify-content-center">
         <Col xs="10" className="product-detail">
-          <Row>
-            <Col xs="6" className="text-center ">
+          <Row className="align-items-center">
+            <Col md="6" xs="12" className="text-center">
               <img
                 className="product-detail__img"
                 src={dataProduct.image}
                 alt={dataProduct.name}
               />
             </Col>
-            <Col xs="6" className="">
+            <Col md="6" xs="12" className="">
               <div className="product-detail__content">
                 <Row>
                   <Col className="product-detail__content--text">
@@ -39,14 +39,14 @@ function Product(props) {
                     <span>{dataProduct.price}.đ</span>
                   </div>
                 </Row>
-                <Row >
+                <Row>
                   <Col>
                     <ListSize listSize={listSize} />
                   </Col>
                 </Row>
                 <Row className="justify-content-center">
-                  <Col xs="auto" className="product-detail__content--btn" >
-                    <span >Thêm vào giỏ hàng</span>
+                  <Col xs="auto" className="product-detail__content--btn">
+                    <span>Thêm vào giỏ hàng</span>
                   </Col>
                 </Row>
                 <Row>

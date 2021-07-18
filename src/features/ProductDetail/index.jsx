@@ -32,6 +32,7 @@ function ProductDetail(props) {
       }
     };
     fetchProduct();
+    window.scrollTo(0, 0);
   }, [paramProduct]);
 
   return (
