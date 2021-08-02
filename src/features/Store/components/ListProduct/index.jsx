@@ -10,25 +10,23 @@ function ListProduct(props) {
 
   useEffect(() => {
     const fetchListProduct = async () => {
-        try {
-          const params = {
+      try {
+        const params = {};
+        const response = await productApi.getAll();
 
-          };
-          const response =await productApi.getAll();
-
-          setListProduct(response.content);
-        } catch (error) {
-          console.log(error)
-        }
-    }
+        setListProduct(response.content);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchListProduct();
   }, []);
 
   return (
     <Container fluid>
       <Row className="list-product">
-        {listProduct.map((product) => (
-          <Col xs="6" md="3">
+        {listProduct.map((product, index) => (
+          <Col xs="6" md="3" key={index}>
             <Product product={product} />
           </Col>
         ))}

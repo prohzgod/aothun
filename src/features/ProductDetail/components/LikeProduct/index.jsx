@@ -33,9 +33,9 @@ function LikeProduct(props) {
       <Row className="like-product__list justify-content-center">
         <Col md="11">
           <Row>
-            {products.map((product) => {
+            {products.map((product, index) => {
               return (
-                <Col xs="6" md="3">
+                <Col xs="6" md="3" key={index}>
                   <Product product={product} />
                 </Col>
               );

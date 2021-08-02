@@ -1,17 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Header from "../../components/Header";
-import ListProduct from "./components/ListProduct";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
+import NotFound from "../../components/NotFound";
+import MainPage from "./pages/main";
 
-function Store(props) {
+Home.propTypes = {};
+
+function Home(props) {
+  const match = useRouteMatch();
   return (
-    <div>
-      <Header />
-      <ListProduct />
-    </div>
+    <Switch>
+      <Route exact path={match.url} component={MainPage} />
+
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
-Store.propTypes = {};
-
-export default Store;
+export default Home;

@@ -4,20 +4,29 @@ import { Container, Input, Row } from "reactstrap";
 
 import "./ListSize.scss";
 
+ListSize.propTypes = {
+  listSize: PropTypes.array,
+};
+
+ListSize.defautProps = {
+  listSize: [],
+};
+
 function ListSize(props) {
   const { listSize } = props;
   const [activeItem, setActiveItem] = useState(null);
 
   const handleClick = (id) => {
-      setActiveItem(id);
+    setActiveItem(id);
+    props.sizeChange(id);
   };
 
   return (
     <Container>
       <Row className="list-size">
-        {listSize.map((size) => {
+        {listSize.map((size, index) => {
           return (
-            <div key={size.id}>
+            <div key={index}>
               <label
                 htmlFor={size.id}
                 className={
@@ -41,13 +50,5 @@ function ListSize(props) {
     </Container>
   );
 }
-
-ListSize.propTypes = {
-  listSize: PropTypes.array,
-};
-
-ListSize.defautProps = {
-  listSize: [],
-};
 
 export default ListSize;

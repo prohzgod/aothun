@@ -18,8 +18,9 @@ function Filter(props) {
           <div className="filter__list--title">
             <span>Loại sản phẩm: </span>
           </div>
-          {categrorys.map((categrory) => (
+          {categrorys.map((categrory, index) => (
             <NavLink
+              key={index}
               className="filter__list--item"
               to={"/store?brand=" + categrory.id}
             >

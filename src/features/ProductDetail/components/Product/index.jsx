@@ -1,12 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Col, Container, Row } from "reactstrap";
+import { Col, Container, Row, Spinner } from "reactstrap";
 
 import "./Product.scss";
 import ListSize from "../ListSize";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct } from "../../productSlice";
+import { useHistory } from "react-router-dom";
+
+Product.propTypes = {
+  dataProduct: PropTypes.object,
+};
+
+Product.defautProps = {
+  dataProduct: null,
+};
 
 function Product(props) {
-  const { dataProduct } = props;
+  const { dataProduct, listSize } = props;
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const initialProduct = {
+    id: dataProduct.id,
+    size: "S",
+  };
+
+  const [isAddToCart, setIsAddToCart] = useState(false);
+
+  const sizeChangeHandle = (size) => {
+    initialProduct.size = size;
+  };
+
+  const listProductCart = useSelector((state) => state.products);
+
+  const addToCart = (value) => {
+    setIsAddToCart(true);
+
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const action = addProduct(value);
+
+        dispatch(action);
+
+        localStorage.setItem("cart", JSON.stringify(listProductCart));
+
+        history.push("/store");
+        resolve(true);
+      }, 500);
+    });
+  };
+
   return (
     <Container fluid>
       <Row className="justify-content-center">
@@ -41,12 +85,20 @@ function Product(props) {
                 </Row>
                 <Row>
                   <Col>
-                    <ListSize listSize={listSize} />
+                    <ListSize
+                      listSize={listSize}
+                      sizeChange={sizeChangeHandle}
+                    />
                   </Col>
                 </Row>
                 <Row className="justify-content-center">
-                  <Col xs="auto" className="product-detail__content--btn">
-                    <span>Thêm vào giỏ hàng</span>
+                  <Col
+                    xs="auto"
+                    className="product-detail__content--btn"
+                    onClick={() => addToCart(initialProduct)}
+                  >
+                    <span>Thêm vào giỏ hàng </span>
+                    {isAddToCart && <Spinner size="sm" />}
                   </Col>
                 </Row>
                 <Row>
@@ -67,15 +119,5 @@ function Product(props) {
     </Container>
   );
 }
-
-Product.propTypes = {
-  dataProduct: PropTypes.object,
-};
-
-Product.defautProps = {
-  dataProduct: null,
-};
-
-const listSize = [{ id: "S" }, { id: "M" }, { id: "L" }, { id: "XL" }];
 
 export default Product;

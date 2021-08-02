@@ -6,7 +6,7 @@ $color_1: #ffffff;
 $color_2: #121212;
 
 @media #{$mobile} {
-  .like-product {
+  .new-product {
     &__title {
       margin-top: 4rem;
       padding: 1rem 0;
@@ -25,7 +25,7 @@ $color_2: #121212;
 }
 
 @media #{$desktop} {
-  .like-product {
+  .new-product {
     &__title {
       margin-top: 4rem;
       padding: 1rem 0;
@@ -44,7 +44,7 @@ $color_2: #121212;
 }
 
 @media #{$tablet} {
-  .like-product {
+  .new-product {
     &__title {
       margin-top: 3rem;
       padding: 1rem 0;
@@ -61,4 +61,3 @@ $color_2: #121212;
     }
   }
 }
-

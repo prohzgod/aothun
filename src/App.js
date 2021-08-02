@@ -1,12 +1,13 @@
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import NotFound from "./components/NotFound";
-import Home from "../src/features/Home";
-import Store from "../src/features/Store";
-import Categories from "../src/features/Categories";
-import ProductDetail from "../src/features/ProductDetail";
 import Test from "../src/features/Test";
+
+const Home = React.lazy(() => import("./features/Home"));
+const Store = React.lazy(() => import("./features/Store"));
+const Categories = React.lazy(() => import("./features/Categories"));
+const ProductDetail = React.lazy(() => import("./features/ProductDetail"));
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Route path="/home" component={Home} />
             <Route path="/store" component={Store} />
             <Route path="/categories" component={Categories} />
-            <Route path="/product/:id" component={ProductDetail} />
+            <Route path="/product" component={ProductDetail} />
             <Route path="/test" component={Test} />
             <Route component={NotFound} />
           </Switch>
