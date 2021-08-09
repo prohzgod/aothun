@@ -59,7 +59,7 @@ function Product(props) {
             <Col md="6" xs="12" className="text-center">
               <img
                 className="product-detail__img"
-                src={dataProduct.image}
+                src={dataProduct.urlImage}
                 alt={dataProduct.name}
               />
             </Col>
@@ -91,10 +91,10 @@ function Product(props) {
                     />
                   </Col>
                 </Row>
-                <Row className="justify-content-center">
+                <Row className="justify-content-start">
                   <Col
                     xs="auto"
-                    className="product-detail__content--btn"
+                    className="product-detail__content--btn ml-3"
                     onClick={() => addToCart(initialProduct)}
                   >
                     <span>Thêm vào giỏ hàng </span>
@@ -104,10 +104,7 @@ function Product(props) {
                 <Row>
                   <Col className="product-detail__content--description">
                     <span>
-                      The California is a backless slip-on shoe with a clean and
-                      sculptural design that strictly emphasizes functionality,
-                      with backless construction to slip on and off with ease,
-                      an inner vent to provide air flow, and a raised tread for
+                      {dataProduct.description}
                     </span>
                   </Col>
                 </Row>

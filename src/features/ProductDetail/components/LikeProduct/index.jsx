@@ -17,6 +17,7 @@ function LikeProduct(props) {
         const response = await productApi.getAll(params);
 
         setProduct(response.content);
+        console.log(response)
       } catch (error) {
         console.log("failed", error);
       }

@@ -9,7 +9,6 @@ function MainCategories(props) {
 
   return (
     <div>
-      <Header />
       <Filter brands={brands} categrorys={categrorys} />
     </div>
   );

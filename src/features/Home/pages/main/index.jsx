@@ -8,7 +8,6 @@ import NewProduct from "../../components/NewProduct";
 function MainHome(props) {
   return (
     <div>
-      <Header />
       <Banner />
       <Introduce />
       <NewProduct />

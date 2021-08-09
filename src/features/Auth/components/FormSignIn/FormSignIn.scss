@@ -1,0 +1,46 @@
+$desktop: "(min-width: 1024px)";
+$tablet: "(min-width: 500px)";
+$mobile: "(max-width: 475px)";
+$color: #f3f3f3;
+$color_1: #ffffff;
+$color_2: #121212;
+
+@media #{$desktop} {
+
+    .btn-submit {
+        margin-left: 0.5rem;
+        padding: 0.6rem;
+        width: 100%;
+        text-align: center;
+        color: $color_2;
+        background-color: $color_1;
+        border-radius: 3px;
+        font-size: 1rem;
+
+        transition: all 750ms;
+
+        &:focus, &:hover, &:active {
+            background-color: $color_2;
+            transition: all 750ms;
+        }
+    }
+
+    .btn-redirect {
+        margin-top: 3rem;
+        margin-left: 1.5rem;
+        width: 95%;
+        padding: .6rem;
+        text-align: center;
+        color: $color_2;
+        border: 1px solid $color_2;
+        border-radius: 3px;
+
+
+        &:focus, &:hover, &:active {
+            color: $color_1;
+            text-decoration: none;
+            background-color: $color_2;
+            transition: all 750ms;
+        }
+    }
+}

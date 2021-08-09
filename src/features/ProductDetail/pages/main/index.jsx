@@ -28,6 +28,7 @@ function MainProductDetail(props) {
       try {
         const response = await productApi.getById(paramProduct);
         setProductDetail(response);
+
       } catch (error) {
         console.log(error);
       }
@@ -36,9 +37,10 @@ function MainProductDetail(props) {
     window.scrollTo(0, 0);
   }, [paramProduct]);
 
+  
+
   return (
     <div>
-      <Header />
       <Product
         dataProduct={productDetail}
         listSize={listSize}

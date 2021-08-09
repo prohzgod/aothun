@@ -6,7 +6,6 @@ import ListProduct from "../../components/ListProduct";
 function MainStore(props) {
   return (
     <div>
-      <Header />
       <ListProduct />
     </div>
   );

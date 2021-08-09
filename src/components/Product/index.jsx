@@ -10,7 +10,7 @@ function Product(props) {
   return (
     <NavLink exact className="product" to={"/product/" + product.id}>
       <Card>
-        <img className="product__img" src={product.image} alt={product.name} />
+        <img className="product__img" src={product.urlImage} alt={product.name} />
         <Container className="product__body">
           <Row>
             <Col className="product__body--title">

@@ -165,7 +165,15 @@ function Header(props) {
                 >
                   <i className="fas fa-bell"></i>
                 </NavLink>
-                <Dropdown
+                <NavLink
+                  exact
+                  activeClassName="active"
+                  className="header__right--item"
+                  to="/auth"
+                >
+                  <i className="fas fa-user-circle"></i>
+                </NavLink>
+                {/* <Dropdown
                   isOpen={dropdownUser}
                   toggle={toggleUser}
                   className="header__right--item"
@@ -177,7 +185,7 @@ function Header(props) {
                     <DropdownItem>Đăng nhập</DropdownItem>
                     <DropdownItem>Đăng ký</DropdownItem>
                   </DropdownMenu>
-                </Dropdown>
+                </Dropdown> */}
               </Row>
             </Col>
           </Row>
